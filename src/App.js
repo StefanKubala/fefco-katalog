@@ -9,7 +9,7 @@ function App() {
   const [detailImage, setDetailImage] = useState("");
   const [isOpenModal, setIsOpenModal] = useState(false);
   const [number, setNumber] = useState(0);
-  const [category, setCategory] = useState(null);
+  const [category, setCategory] = useState("klopove-krabice");
 
   function handleOpenModal() {
     setIsOpenModal((open) => !open);
@@ -49,11 +49,26 @@ function App() {
       />
 
       <div>
-        <button onClick={() => handleChangeCategory("prirezy")}>
-          Zobraziť prirezy
-        </button>
+        <button onClick={() => handleChangeCategory("prirezy")}>Prírezy</button>
         <button onClick={() => handleChangeCategory("klopove-krabice")}>
-          Zobraziť klopové krabice
+          Klopové krabice
+        </button>
+        <button onClick={() => handleChangeCategory("krabice-s-vekom")}>
+          Krabice s vekom
+        </button>
+        <button
+          onClick={() => handleChangeCategory("skladane-obaly-a-paletky")}
+        >
+          Skladané obaly a paletky
+        </button>
+        <button onClick={() => handleChangeCategory("zasuvacie-obaly")}>
+          Zasúvacie obaly
+        </button>
+        <button onClick={() => handleChangeCategory("zlepene-obaly")}>
+          Zasúvacie obaly
+        </button>
+        <button onClick={() => handleChangeCategory("vnutorne-obalove-prvky")}>
+          Vnútorné obalové prvky
         </button>
 
         <div id="boxList">
