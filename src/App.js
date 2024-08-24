@@ -5,6 +5,8 @@ import "./App.css";
 import Modal from "./components/Modal";
 import SingleBox from "./components/SingleBox";
 import SingleCategory from "./components/SingleCategory";
+import Header from "./components/Header";
+import Hero from "./components/Hero";
 
 function App() {
   const [query, setQuery] = useState("");
@@ -43,6 +45,8 @@ function App() {
 
   return (
     <div className="app">
+      <Header />
+      <Hero />
       <div className="container">
         <div className="left-box">
           <input
