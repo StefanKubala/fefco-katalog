@@ -3,6 +3,8 @@ import { Boxes } from "./boxes";
 
 import "./App.css";
 import Modal from "./components/Modal";
+import SingleBox from "./components/SingleBox";
+import SingleCategory from "./components/SingleCategory";
 
 function App() {
   const [query, setQuery] = useState("");
@@ -41,63 +43,94 @@ function App() {
 
   return (
     <div className="app">
-      <input
-        className="search"
-        placeholder="Search..."
-        value={query}
-        onChange={(e) => setQuery(e.target.value.toLowerCase())}
-      />
-
-      <div>
-        <button onClick={() => handleChangeCategory("prirezy")}>Prírezy</button>
-        <button onClick={() => handleChangeCategory("klopove-krabice")}>
-          Klopové krabice
-        </button>
-        <button onClick={() => handleChangeCategory("krabice-s-vekom")}>
-          Krabice s vekom
-        </button>
-        <button
-          onClick={() => handleChangeCategory("skladane-obaly-a-paletky")}
-        >
-          Skladané obaly a paletky
-        </button>
-        <button onClick={() => handleChangeCategory("zasuvacie-obaly")}>
-          Zasúvacie obaly
-        </button>
-        <button onClick={() => handleChangeCategory("zlepene-obaly")}>
-          Zasúvacie obaly
-        </button>
-        <button onClick={() => handleChangeCategory("vnutorne-obalove-prvky")}>
-          Vnútorné obalové prvky
-        </button>
-
-        <div id="boxList">
-          {filteredBoxes.length > 0 ? (
-            filteredBoxes.map((box) => (
-              <div key={box.id}>
-                <h3>{box.description}</h3>
-                <img
-                  onClick={() =>
-                    handleImageClick(box.description, box.detail_image)
-                  }
-                  src={box.image}
-                  alt={box.description}
-                />
-              </div>
-            ))
-          ) : (
-            <p>Žiadne produkty neboli nájdené.</p>
-          )}
+      <div className="container">
+        <div className="left-box">
+          <input
+            className="search"
+            placeholder="Search..."
+            value={query}
+            onChange={(e) => setQuery(e.target.value.toLowerCase())}
+          />
+          <div className="categories-buttons">
+            <SingleCategory
+              onChangeCategory={handleChangeCategory}
+              category={"prirezy"}
+              text={"01 Prírezy"}
+              image={
+                "https://mtobaly.sitecloud.sk/wp-content/uploads/2024/08/0100-2.gif"
+              }
+            />
+            <SingleCategory
+              onChangeCategory={handleChangeCategory}
+              category={"klopove-krabice"}
+              text={"02 Klopové krabice"}
+              image={
+                "https://mtobaly.sitecloud.sk/wp-content/uploads/2024/08/0200-3.gif"
+              }
+            />
+            <SingleCategory
+              onChangeCategory={handleChangeCategory}
+              category={"krabice-s-vekom"}
+              text={"03 Krabice s vekom"}
+              image={
+                "https://mtobaly.sitecloud.sk/wp-content/uploads/2024/08/0300-2.gif"
+              }
+            />
+            <SingleCategory
+              onChangeCategory={handleChangeCategory}
+              category={"skladane-obaly-a-paletky"}
+              text={"04 Skladané obaly a paletky"}
+              image={
+                "https://mtobaly.sitecloud.sk/wp-content/uploads/2024/08/0401.gif"
+              }
+            />
+            <SingleCategory
+              onChangeCategory={handleChangeCategory}
+              category={"zasuvacie-obaly"}
+              text={"05 Zasúvacie obaly"}
+              image={
+                "https://mtobaly.sitecloud.sk/wp-content/uploads/2024/08/0501.gif"
+              }
+            />
+            <SingleCategory
+              onChangeCategory={handleChangeCategory}
+              category={"zlepene-obaly"}
+              text={"07 Zlepené obaly"}
+              image={
+                "https://mtobaly.sitecloud.sk/wp-content/uploads/2024/08/0700.gif"
+              }
+            />
+            <SingleCategory
+              onChangeCategory={handleChangeCategory}
+              category={"vnutorne-obalove-prvky"}
+              text={"09 Vnútorné obalové prvky"}
+              image={
+                "https://mtobaly.sitecloud.sk/wp-content/uploads/2024/08/0900.gif"
+              }
+            />
+          </div>
         </div>
-      </div>
 
-      {isOpenModal && (
-        <Modal
-          onCloseModal={handleImageClick}
-          detailImage={detailImage}
-          number={number}
-        />
-      )}
+        <div className="right-box">
+          <div className="box-list">
+            {filteredBoxes.length > 0 ? (
+              filteredBoxes.map((box) => (
+                <SingleBox box={box} onImageClick={handleImageClick} />
+              ))
+            ) : (
+              <p>Žiadne produkty neboli nájdené.</p>
+            )}
+          </div>
+        </div>
+
+        {isOpenModal && (
+          <Modal
+            onCloseModal={handleImageClick}
+            detailImage={detailImage}
+            number={number}
+          />
+        )}
+      </div>
     </div>
   );
 }

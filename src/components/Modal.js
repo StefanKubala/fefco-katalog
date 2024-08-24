@@ -1,9 +1,13 @@
 function Modal({ detailImage, number, onCloseModal }) {
   return (
-    <div className="detail">
-      <p>0{number}</p>
-      <span onClick={() => onCloseModal(false)}>❌</span>
-      <img src={detailImage} alt="test"></img>
+    <div className="lightbox">
+      <div className="detail">
+        <div className="detail-flex">
+          <p>0{number}</p>
+          <span onClick={() => onCloseModal(false)}>❌</span>
+        </div>
+        <img src={detailImage} alt="test"></img>
+      </div>
     </div>
   );
 }
