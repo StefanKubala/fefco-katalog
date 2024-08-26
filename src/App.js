@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Boxes } from "./boxes";
 
 import "./App.css";
+
 import Modal from "./components/Modal";
 import SingleBox from "./components/SingleBox";
 import SingleCategory from "./components/SingleCategory";

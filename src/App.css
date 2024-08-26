@@ -6,8 +6,9 @@
   flex-direction: column;
   margin: 0 auto;
   font-family: Roboto, sans-serif;
+
   /* RESPONZIVITA */
-  /* width: 1300px; */
+  width: 1300px;
 }
 
 .container {
@@ -178,3 +179,9 @@
 .detail-flex span {
   cursor: pointer;
 }
+
+/* @media only screen and (max-width: 1320px) {
+  .app {
+    width: 1310px;
+  }
+} */
