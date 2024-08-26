@@ -30,7 +30,7 @@ function Header() {
     //     </nav>
     //   </div>
     // </div>
-    <p>test</p>
+    <p>header</p>
   );
 }
 

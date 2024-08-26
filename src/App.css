@@ -191,7 +191,7 @@
   .container {
     flex-direction: column;
     width: 100%;
-    padding: 1rem;
+    padding: 0 !important;
   }
 
   /* .categories-buttons {
@@ -235,6 +235,8 @@
 
   .search {
     font-size: 2rem;
+    width: 90%;
+    margin: 0 auto;
   }
 
   .single-box img {
