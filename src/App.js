@@ -52,7 +52,8 @@ function App() {
         <div className="left-box">
           <input
             className="search"
-            placeholder="Hľadať..."
+            type="tel"
+            placeholder="Zadajte číslo"
             value={query}
             onChange={(e) => setQuery(e.target.value.toLowerCase())}
           />
@@ -123,7 +124,7 @@ function App() {
                 <SingleBox box={box} onImageClick={handleImageClick} />
               ))
             ) : (
-              <p>Žiadne produkty neboli nájdené.</p>
+              <p className="no-products">Žiadne produkty neboli nájdené.</p>
             )}
           </div>
         </div>
