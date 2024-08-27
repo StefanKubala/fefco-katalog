@@ -52,7 +52,7 @@ function App() {
         <div className="left-box">
           <input
             className="search"
-            placeholder="Search..."
+            placeholder="Hľadať..."
             value={query}
             onChange={(e) => setQuery(e.target.value.toLowerCase())}
           />

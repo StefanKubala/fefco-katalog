@@ -3,7 +3,7 @@ function Modal({ detailImage, number, onCloseModal }) {
     <div className="lightbox">
       <div className="detail">
         <div className="detail-flex">
-          <p>0{number}</p>
+          <p>{number}</p>
           <span onClick={() => onCloseModal(false)}>❌</span>
         </div>
         <img src={detailImage} alt="test"></img>
