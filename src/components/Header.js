@@ -17,16 +17,19 @@ function Header() {
           ></img>
         </a>
         <div className="nav-menu">
-          <a href="/" className="menu-link">
+          <a href="https://fefco-katalog.vercel.app/" className="menu-link">
             FEFCO katalóg
           </a>
-          <a href="/about" className="menu-link">
+          <a
+            href="http://www.mtmobaly.sk/portfolio-produktov/"
+            className="menu-link"
+          >
             Portfólio produktov
           </a>
-          <a href="/services" className="menu-link">
+          <a href="http://www.mtmobaly.sk/o-nas/" className="menu-link">
             O nás
           </a>
-          <a href="/contact" className="menu-link">
+          <a href="http://www.mtmobaly.sk/kontakt/" className="menu-link">
             Kontakt
           </a>
         </div>
