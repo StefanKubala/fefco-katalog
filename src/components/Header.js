@@ -10,7 +10,7 @@ function Header() {
   return (
     <div className="header-container">
       <nav className="nav">
-        <a href="/" className="logo">
+        <a href="http://www.mtmobaly.sk/" className="logo">
           <img
             src="https://mtobaly.sitecloud.sk/wp-content/uploads/elementor/thumbs/mtm-logo-qse7b4y7w10mhvg31d7rldcigeuh6si7s055be2874.png"
             alt="logo"
