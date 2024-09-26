@@ -50,10 +50,11 @@
 .menu-link {
   color: #fff;
   text-decoration: none;
+  transition: all 0.3s;
 }
 
 .menu-link:hover {
-  color: #f0f0f0;
+  color: #06a796;
 }
 
 .hamburger {
@@ -118,7 +119,7 @@
       rgba(105, 89, 79, 0.5),
       rgba(105, 89, 79, 0.5)
     ),
-    url("https://mtobaly.sitecloud.sk/wp-content/uploads/2024/08/working-as-handyman-install-the-new-door-lock-in-the-room-e1696329911540.jpg");
+    url("http://www.mtmobaly.sk/wp-content/uploads/2024/09/cardboard-craft-package-box-and-bag-set-2023-11-27-04-52-47-utc-scaled.webp");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

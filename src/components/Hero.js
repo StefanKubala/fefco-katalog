@@ -3,10 +3,7 @@ function Hero() {
     <div className="hero">
       <div className="hero-text">
         <h2>FEFCO katalóg</h2>
-        <p>
-          We are here for you. Don't hesitate to reach out to us<br></br>{" "}
-          anytime
-        </p>
+        <p>Vyberte si požadované produkty z nášho FEFCO KATALÓGU:</p>
       </div>
     </div>
   );
