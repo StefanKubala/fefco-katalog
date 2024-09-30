@@ -133,7 +133,12 @@ function Footer() {
       </div>
       <div className="footer-copyright">
         <h3>
-          <span>LAVERDE</span> - správa stránky
+          <span>
+            <a href="https://laverde.sk/" target="blank">
+              LAVERDE
+            </a>
+          </span>{" "}
+          - správa stránky
         </h3>
       </div>
     </>

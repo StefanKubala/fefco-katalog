@@ -30,9 +30,10 @@
   background-color: #fff;
 }
 
-.footer-copyright span {
+.footer-copyright span a {
   color: #63a74e;
   font-weight: 700;
+  text-decoration: none;
 }
 
 .footer-copyright h3 {
