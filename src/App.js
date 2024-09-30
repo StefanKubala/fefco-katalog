@@ -8,6 +8,7 @@ import SingleBox from "./components/SingleBox";
 import SingleCategory from "./components/SingleCategory";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
+import Footer from "./components/Footer";
 
 function App() {
   const [query, setQuery] = useState("");
@@ -137,6 +138,7 @@ function App() {
           />
         )}
       </div>
+      <Footer />
     </div>
   );
 }
